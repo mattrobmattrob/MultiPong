@@ -25,6 +25,8 @@
     
     if (self) {
         self.name = name;
+        self.fontSize = 50;
+        self.fontName = @"SFUIDisplay-Medium";
         self.count = 0;
         [self updateText];
     }

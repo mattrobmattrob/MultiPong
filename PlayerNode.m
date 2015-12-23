@@ -49,7 +49,7 @@
     paddle.position = CGPointMake(100, CGRectGetMidY(self.parent.frame));
     
     SKNode *score = [self childNodeWithName:@"leftScore"];
-    score.position = CGPointMake((CGRectGetMidX(self.parent.frame) - 50), self.parent.frame.size.height - 50);
+    score.position = CGPointMake((CGRectGetMidX(self.parent.frame) - 100), self.parent.frame.size.height - 55);
 }
 
 - (void)positionOnRightSide
@@ -58,7 +58,7 @@
     paddle.position = CGPointMake(self.parent.frame.size.width - 100, CGRectGetMidY(self.parent.frame));
     
     SKNode *score = [self childNodeWithName:@"rightScore"];
-    score.position = CGPointMake((CGRectGetMidX(self.parent.frame) + 50), self.parent.frame.size.height - 50);
+    score.position = CGPointMake((CGRectGetMidX(self.parent.frame) + 100), self.parent.frame.size.height - 55);
 
 }
 

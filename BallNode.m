@@ -15,7 +15,7 @@
 
 - (id)init
 {
-    return [self initWithRadius:10];
+    return [self initWithRadius:25];
 }
 
 - (id)initWithRadius:(float)radius
@@ -26,7 +26,7 @@
         CGPathAddArc(pathRef, NULL, 0,0, radius, 0, M_PI*2, YES);
         self.path = pathRef;
         self.fillColor = [SKColor whiteColor];
-        self.strokeColor = [SKColor redColor];
+//        self.strokeColor = [SKColor redColor];
         self.userInteractionEnabled = YES;
         self.hidden = YES;
         self.name = @"ball";

@@ -36,7 +36,7 @@ static const uint32_t serveBallRightwardsStatus = 0x1 << 1;
 
 - (void)createSceneContents
 {
-    self.backgroundColor = [SKColor grayColor];
+    self.backgroundColor = [SKColor blackColor];
     self.scaleMode = SKSceneScaleModeResizeFill;
 
     BallNode *ball = [[BallNode alloc] init];

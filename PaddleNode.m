@@ -27,7 +27,7 @@ static const float movingAveragelambda = 0.8;
 {
     self = [super init];
     if (self) {
-        self.size = CGSizeMake(20, 50);
+        self.size = CGSizeMake(30, 150);
         self.color = [SKColor whiteColor];
         self.userInteractionEnabled = YES;
         self.name = name;
