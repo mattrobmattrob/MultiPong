@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>MultiPong iPhone.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>MultiPong.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +23,16 @@
 			<true/>
 		</dict>
 		<key>354314931C2A7DC500602C50</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>354314A81C2A8DFA00602C50</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>354314C21C2A8DFA00602C50</key>
 		<dict>
 			<key>primary</key>
 			<true/>
