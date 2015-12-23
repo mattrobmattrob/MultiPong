@@ -13,7 +13,6 @@ static const float movingAveragelambda = 0.8;
 
 @interface PaddleNode ()
 @property (nonatomic, assign) NSTimeInterval previousTouchesTimestamp;
-@property (nonatomic, assign, readwrite) float speed;
 @property (nonatomic, strong) NSValue *currentTouchValue;
 @end
 
