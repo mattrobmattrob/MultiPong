@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Pause View Controller-->
+        <scene sceneID="pXg-sg-aJO">
+            <objects>
+                <viewController storyboardIdentifier="PauseViewController" id="WwJ-Pm-dmh" customClass="PauseViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JBS-RW-Ppg"/>
+                        <viewControllerLayoutGuide type="bottom" id="ecV-Ls-MKu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="w1K-O6-V2d">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SsN-hH-lUF">
+                                <rect key="frame" x="838" y="497" width="245" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="245" id="dlN-cb-vZY"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Resume"/>
+                                <connections>
+                                    <action selector="resume:" destination="WwJ-Pm-dmh" eventType="primaryActionTriggered" id="a73-15-ZGC"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paused" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73l-PN-hqX">
+                                <rect key="frame" x="860" y="20" width="201" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="1x8-J7-fmp"/>
+                                    <constraint firstAttribute="width" constant="201" id="6dg-xY-EGt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="73l-PN-hqX" firstAttribute="top" secondItem="w1K-O6-V2d" secondAttribute="top" constant="20" symbolic="YES" id="Hdn-fZ-0XT"/>
+                            <constraint firstItem="73l-PN-hqX" firstAttribute="centerX" secondItem="SsN-hH-lUF" secondAttribute="centerX" id="LON-O3-o7j"/>
+                            <constraint firstItem="SsN-hH-lUF" firstAttribute="centerY" secondItem="w1K-O6-V2d" secondAttribute="centerY" id="M54-GR-t12"/>
+                            <constraint firstItem="SsN-hH-lUF" firstAttribute="centerX" secondItem="w1K-O6-V2d" secondAttribute="centerX" id="euK-Br-1hx"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HWs-dS-g4g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="454" y="369"/>
+        </scene>
+    </scenes>
+</document>

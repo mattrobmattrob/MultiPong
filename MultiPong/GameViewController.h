@@ -11,4 +11,6 @@
 
 @interface GameViewController : UIViewController
 
+- (void)resumeGame;
+
 @end

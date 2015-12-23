@@ -13,6 +13,7 @@
 #import "ScoreNode.h"
 #import "NodeCategories.h"
 #import "VisitablePhysicsBody.h"
+#import "PauseViewController.h"
 
 static const CGFloat  contactTolerance          = 1.0;
 static const uint32_t emptyBallStatus           = 0x0;
@@ -216,6 +217,17 @@ static const uint32_t serveBallRightwardsStatus = 0x1 << 1;
     }
     
     [self serveBallRightwards];
+}
+
+- (void)pause {
+    self.paused = true;
+    
+    UIViewController *vc = self.view.window.rootViewController;
+    [vc performSegueWithIdentifier:@"pushToPause" sender:self];
+}
+
+- (void)resume {
+    self.paused = false;
 }
 
 - (void)update:(NSTimeInterval)currentTime

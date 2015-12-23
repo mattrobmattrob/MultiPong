@@ -43,12 +43,18 @@
 #endif
 
     // MSR TODO: Implement menu buttons for game actions
-//    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapped)];
-//    tapGestureRecognizer.allowedPressTypes = @[@(UIPressTypePlayPause)];
-//    [self.view addGestureRecognizer:tapGestureRecognizer];
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapped:)];
+    tapGestureRecognizer.allowedPressTypes = @[@(UIPressTypeMenu)];
+    [self.view addGestureRecognizer:tapGestureRecognizer];
 
     UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panned:)];
     [self.view addGestureRecognizer:panGestureRecognizer];
+}
+
+- (void)tapped:(UIGestureRecognizer *)gestureRecognizer {
+    SKView *spriteView = (SKView *)self.view;
+    PlayfieldScene *playfield = (PlayfieldScene *)spriteView.scene;
+    [playfield pause];
 }
 
 -(void)panned:(UIGestureRecognizer *)gestureRecognizer
@@ -58,6 +64,12 @@
     PlayfieldScene *playfield = (PlayfieldScene *)spriteView.scene;
     CGPoint translation = [panGesture translationInView:self.view];
     [playfield translateLeftPaddeInView:translation];
+}
+
+- (void)resumeGame {
+    SKView *spriteView = (SKView *)self.view;
+    PlayfieldScene *playfield = (PlayfieldScene *)spriteView.scene;
+    [playfield resume];
 }
 
 - (void)viewWillAppear:(BOOL)animated

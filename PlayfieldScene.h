@@ -18,5 +18,7 @@
 - (void)serveBallLeftwards;
 - (void)serveBallRightwards;
 - (void)reset;
+- (void)pause;
+- (void)resume;
 
 @end

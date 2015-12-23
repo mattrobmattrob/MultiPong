@@ -48,6 +48,8 @@
 		35FEEFA91C2AB27700D43637 /* ContactVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FEEFA71C2AB27700D43637 /* ContactVisitor.m */; };
 		35FEEFAC1C2AB32900D43637 /* PlayerNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FEEFAB1C2AB32900D43637 /* PlayerNode.m */; };
 		35FEEFAD1C2AB32900D43637 /* PlayerNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FEEFAB1C2AB32900D43637 /* PlayerNode.m */; };
+		4D4B64D21C2B600800DA901A /* PauseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4B64D11C2B600800DA901A /* PauseViewController.m */; };
+		4D4B64D81C2B676F00DA901A /* Pause.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D4B64D71C2B676F00DA901A /* Pause.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +126,9 @@
 		35FEEFA71C2AB27700D43637 /* ContactVisitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactVisitor.m; sourceTree = "<group>"; };
 		35FEEFAA1C2AB28F00D43637 /* RandomHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RandomHelper.h; sourceTree = "<group>"; };
 		35FEEFAB1C2AB32900D43637 /* PlayerNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerNode.m; sourceTree = "<group>"; };
+		4D4B64D01C2B600800DA901A /* PauseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PauseViewController.h; path = ../PauseViewController.h; sourceTree = "<group>"; };
+		4D4B64D11C2B600800DA901A /* PauseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PauseViewController.m; path = ../PauseViewController.m; sourceTree = "<group>"; };
+		4D4B64D71C2B676F00DA901A /* Pause.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Pause.storyboard; path = ../Pause.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +198,9 @@
 				354314831C2A7DC400602C50 /* GameScene.sks */,
 				354314851C2A7DC400602C50 /* GameViewController.h */,
 				354314861C2A7DC400602C50 /* GameViewController.m */,
+				4D4B64D01C2B600800DA901A /* PauseViewController.h */,
+				4D4B64D11C2B600800DA901A /* PauseViewController.m */,
+				4D4B64D71C2B676F00DA901A /* Pause.storyboard */,
 				354314881C2A7DC400602C50 /* Game.xcassets */,
 				3543148A1C2A7DC400602C50 /* Main.storyboard */,
 				3543148D1C2A7DC500602C50 /* Assets.xcassets */,
@@ -416,6 +424,7 @@
 				354314841C2A7DC400602C50 /* GameScene.sks in Resources */,
 				3543148E1C2A7DC500602C50 /* Assets.xcassets in Resources */,
 				354314891C2A7DC400602C50 /* Game.xcassets in Resources */,
+				4D4B64D81C2B676F00DA901A /* Pause.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +473,7 @@
 				35FEEF951C2AB23600D43637 /* PaddleNode.m in Sources */,
 				35FEEF8E1C2AB22400D43637 /* PlayfieldSceneContactVisitor.m in Sources */,
 				35FEEFA81C2AB27700D43637 /* ContactVisitor.m in Sources */,
+				4D4B64D21C2B600800DA901A /* PauseViewController.m in Sources */,
 				354314821C2A7DC400602C50 /* GameScene.m in Sources */,
 				3543147C1C2A7DC400602C50 /* main.m in Sources */,
 			);
