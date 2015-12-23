@@ -26,6 +26,28 @@
 		354314BD1C2A8DFA00602C50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 354314BB1C2A8DFA00602C50 /* LaunchScreen.storyboard */; };
 		354314C81C2A8DFA00602C50 /* MultiPong_iPhoneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 354314C71C2A8DFA00602C50 /* MultiPong_iPhoneTests.m */; };
 		354314D11C2A8E0E00602C50 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 354314D01C2A8E0E00602C50 /* GameKit.framework */; };
+		35FEEF821C2AB1DB00D43637 /* PlayfieldScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FEEF811C2AB1DB00D43637 /* PlayfieldScene.m */; };
+		35FEEF831C2AB1DB00D43637 /* PlayfieldScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FEEF811C2AB1DB00D43637 /* PlayfieldScene.m */; };
+		35FEEF8A1C2AB22400D43637 /* BallNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FEEF851C2AB22400D43637 /* BallNode.m */; };
+		35FEEF8B1C2AB22400D43637 /* BallNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FEEF851C2AB22400D43637 /* BallNode.m */; };
+		35FEEF8C1C2AB22400D43637 /* BallNodeContactVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FEEF871C2AB22400D43637 /* BallNodeContactVisitor.m */; };
+		35FEEF8D1C2AB22400D43637 /* BallNodeContactVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FEEF871C2AB22400D43637 /* BallNodeContactVisitor.m */; };
+		35FEEF8E1C2AB22400D43637 /* PlayfieldSceneContactVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FEEF891C2AB22400D43637 /* PlayfieldSceneContactVisitor.m */; };
+		35FEEF8F1C2AB22400D43637 /* PlayfieldSceneContactVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FEEF891C2AB22400D43637 /* PlayfieldSceneContactVisitor.m */; };
+		35FEEF951C2AB23600D43637 /* PaddleNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FEEF911C2AB23600D43637 /* PaddleNode.m */; };
+		35FEEF961C2AB23600D43637 /* PaddleNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FEEF911C2AB23600D43637 /* PaddleNode.m */; };
+		35FEEF971C2AB23600D43637 /* PaddleNodeContactVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FEEF931C2AB23600D43637 /* PaddleNodeContactVisitor.m */; };
+		35FEEF981C2AB23600D43637 /* PaddleNodeContactVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FEEF931C2AB23600D43637 /* PaddleNodeContactVisitor.m */; };
+		35FEEF9F1C2AB24700D43637 /* ResetNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FEEF9A1C2AB24700D43637 /* ResetNode.m */; };
+		35FEEFA01C2AB24700D43637 /* ResetNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FEEF9A1C2AB24700D43637 /* ResetNode.m */; };
+		35FEEFA11C2AB24700D43637 /* ScoreNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FEEF9C1C2AB24700D43637 /* ScoreNode.m */; };
+		35FEEFA21C2AB24700D43637 /* ScoreNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FEEF9C1C2AB24700D43637 /* ScoreNode.m */; };
+		35FEEFA31C2AB24700D43637 /* VisitablePhysicsBody.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FEEF9E1C2AB24700D43637 /* VisitablePhysicsBody.m */; };
+		35FEEFA41C2AB24700D43637 /* VisitablePhysicsBody.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FEEF9E1C2AB24700D43637 /* VisitablePhysicsBody.m */; };
+		35FEEFA81C2AB27700D43637 /* ContactVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FEEFA71C2AB27700D43637 /* ContactVisitor.m */; };
+		35FEEFA91C2AB27700D43637 /* ContactVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FEEFA71C2AB27700D43637 /* ContactVisitor.m */; };
+		35FEEFAC1C2AB32900D43637 /* PlayerNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FEEFAB1C2AB32900D43637 /* PlayerNode.m */; };
+		35FEEFAD1C2AB32900D43637 /* PlayerNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FEEFAB1C2AB32900D43637 /* PlayerNode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +100,30 @@
 		354314C71C2A8DFA00602C50 /* MultiPong_iPhoneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultiPong_iPhoneTests.m; sourceTree = "<group>"; };
 		354314C91C2A8DFA00602C50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		354314D01C2A8E0E00602C50 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/GameKit.framework; sourceTree = DEVELOPER_DIR; };
+		35FEEF801C2AB1DB00D43637 /* PlayfieldScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayfieldScene.h; sourceTree = "<group>"; };
+		35FEEF811C2AB1DB00D43637 /* PlayfieldScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayfieldScene.m; sourceTree = "<group>"; };
+		35FEEF841C2AB22400D43637 /* BallNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BallNode.h; sourceTree = "<group>"; };
+		35FEEF851C2AB22400D43637 /* BallNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BallNode.m; sourceTree = "<group>"; };
+		35FEEF861C2AB22400D43637 /* BallNodeContactVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BallNodeContactVisitor.h; sourceTree = "<group>"; };
+		35FEEF871C2AB22400D43637 /* BallNodeContactVisitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BallNodeContactVisitor.m; sourceTree = "<group>"; };
+		35FEEF881C2AB22400D43637 /* PlayfieldSceneContactVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayfieldSceneContactVisitor.h; sourceTree = "<group>"; };
+		35FEEF891C2AB22400D43637 /* PlayfieldSceneContactVisitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayfieldSceneContactVisitor.m; sourceTree = "<group>"; };
+		35FEEF901C2AB23600D43637 /* PaddleNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaddleNode.h; sourceTree = "<group>"; };
+		35FEEF911C2AB23600D43637 /* PaddleNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaddleNode.m; sourceTree = "<group>"; };
+		35FEEF921C2AB23600D43637 /* PaddleNodeContactVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaddleNodeContactVisitor.h; sourceTree = "<group>"; };
+		35FEEF931C2AB23600D43637 /* PaddleNodeContactVisitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaddleNodeContactVisitor.m; sourceTree = "<group>"; };
+		35FEEF941C2AB23600D43637 /* PlayerNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerNode.h; sourceTree = "<group>"; };
+		35FEEF991C2AB24700D43637 /* ResetNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetNode.h; sourceTree = "<group>"; };
+		35FEEF9A1C2AB24700D43637 /* ResetNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetNode.m; sourceTree = "<group>"; };
+		35FEEF9B1C2AB24700D43637 /* ScoreNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreNode.h; sourceTree = "<group>"; };
+		35FEEF9C1C2AB24700D43637 /* ScoreNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreNode.m; sourceTree = "<group>"; };
+		35FEEF9D1C2AB24700D43637 /* VisitablePhysicsBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisitablePhysicsBody.h; sourceTree = "<group>"; };
+		35FEEF9E1C2AB24700D43637 /* VisitablePhysicsBody.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VisitablePhysicsBody.m; sourceTree = "<group>"; };
+		35FEEFA51C2AB25D00D43637 /* NodeCategories.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeCategories.h; sourceTree = "<group>"; };
+		35FEEFA61C2AB27700D43637 /* ContactVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactVisitor.h; sourceTree = "<group>"; };
+		35FEEFA71C2AB27700D43637 /* ContactVisitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactVisitor.m; sourceTree = "<group>"; };
+		35FEEFAA1C2AB28F00D43637 /* RandomHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RandomHelper.h; sourceTree = "<group>"; };
+		35FEEFAB1C2AB32900D43637 /* PlayerNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerNode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +163,7 @@
 		3543146E1C2A7DC400602C50 = {
 			isa = PBXGroup;
 			children = (
+				35FEEF7F1C2AB1AC00D43637 /* Game Scene */,
 				354314791C2A7DC400602C50 /* MultiPong */,
 				354314971C2A7DC500602C50 /* MultiPongTests */,
 				354314AA1C2A8DFA00602C50 /* MultiPong iPhone */,
@@ -206,6 +253,37 @@
 				354314C91C2A8DFA00602C50 /* Info.plist */,
 			);
 			path = "MultiPong iPhoneTests";
+			sourceTree = "<group>";
+		};
+		35FEEF7F1C2AB1AC00D43637 /* Game Scene */ = {
+			isa = PBXGroup;
+			children = (
+				35FEEF841C2AB22400D43637 /* BallNode.h */,
+				35FEEF851C2AB22400D43637 /* BallNode.m */,
+				35FEEF861C2AB22400D43637 /* BallNodeContactVisitor.h */,
+				35FEEF871C2AB22400D43637 /* BallNodeContactVisitor.m */,
+				35FEEFA61C2AB27700D43637 /* ContactVisitor.h */,
+				35FEEFA71C2AB27700D43637 /* ContactVisitor.m */,
+				35FEEFA51C2AB25D00D43637 /* NodeCategories.h */,
+				35FEEF901C2AB23600D43637 /* PaddleNode.h */,
+				35FEEF911C2AB23600D43637 /* PaddleNode.m */,
+				35FEEF921C2AB23600D43637 /* PaddleNodeContactVisitor.h */,
+				35FEEF931C2AB23600D43637 /* PaddleNodeContactVisitor.m */,
+				35FEEF941C2AB23600D43637 /* PlayerNode.h */,
+				35FEEFAB1C2AB32900D43637 /* PlayerNode.m */,
+				35FEEF801C2AB1DB00D43637 /* PlayfieldScene.h */,
+				35FEEF811C2AB1DB00D43637 /* PlayfieldScene.m */,
+				35FEEF881C2AB22400D43637 /* PlayfieldSceneContactVisitor.h */,
+				35FEEF891C2AB22400D43637 /* PlayfieldSceneContactVisitor.m */,
+				35FEEFAA1C2AB28F00D43637 /* RandomHelper.h */,
+				35FEEF991C2AB24700D43637 /* ResetNode.h */,
+				35FEEF9A1C2AB24700D43637 /* ResetNode.m */,
+				35FEEF9B1C2AB24700D43637 /* ScoreNode.h */,
+				35FEEF9C1C2AB24700D43637 /* ScoreNode.m */,
+				35FEEF9D1C2AB24700D43637 /* VisitablePhysicsBody.h */,
+				35FEEF9E1C2AB24700D43637 /* VisitablePhysicsBody.m */,
+			);
+			name = "Game Scene";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,8 +451,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35FEEF821C2AB1DB00D43637 /* PlayfieldScene.m in Sources */,
 				354314871C2A7DC400602C50 /* GameViewController.m in Sources */,
+				35FEEFA31C2AB24700D43637 /* VisitablePhysicsBody.m in Sources */,
+				35FEEF8C1C2AB22400D43637 /* BallNodeContactVisitor.m in Sources */,
+				35FEEF8A1C2AB22400D43637 /* BallNode.m in Sources */,
+				35FEEFA11C2AB24700D43637 /* ScoreNode.m in Sources */,
 				3543147F1C2A7DC400602C50 /* AppDelegate.m in Sources */,
+				35FEEF9F1C2AB24700D43637 /* ResetNode.m in Sources */,
+				35FEEF971C2AB23600D43637 /* PaddleNodeContactVisitor.m in Sources */,
+				35FEEFAC1C2AB32900D43637 /* PlayerNode.m in Sources */,
+				35FEEF951C2AB23600D43637 /* PaddleNode.m in Sources */,
+				35FEEF8E1C2AB22400D43637 /* PlayfieldSceneContactVisitor.m in Sources */,
+				35FEEFA81C2AB27700D43637 /* ContactVisitor.m in Sources */,
 				354314821C2A7DC400602C50 /* GameScene.m in Sources */,
 				3543147C1C2A7DC400602C50 /* main.m in Sources */,
 			);
@@ -392,9 +481,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35FEEF981C2AB23600D43637 /* PaddleNodeContactVisitor.m in Sources */,
+				35FEEFA41C2AB24700D43637 /* VisitablePhysicsBody.m in Sources */,
+				35FEEFAD1C2AB32900D43637 /* PlayerNode.m in Sources */,
+				35FEEFA01C2AB24700D43637 /* ResetNode.m in Sources */,
+				35FEEFA21C2AB24700D43637 /* ScoreNode.m in Sources */,
 				354314B01C2A8DFA00602C50 /* AppDelegate.m in Sources */,
 				354314B51C2A8DFA00602C50 /* GameViewController.m in Sources */,
+				35FEEF8B1C2AB22400D43637 /* BallNode.m in Sources */,
 				354314AD1C2A8DFA00602C50 /* main.m in Sources */,
+				35FEEF8D1C2AB22400D43637 /* BallNodeContactVisitor.m in Sources */,
+				35FEEF8F1C2AB22400D43637 /* PlayfieldSceneContactVisitor.m in Sources */,
+				35FEEF831C2AB1DB00D43637 /* PlayfieldScene.m in Sources */,
+				35FEEFA91C2AB27700D43637 /* ContactVisitor.m in Sources */,
+				35FEEF961C2AB23600D43637 /* PaddleNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

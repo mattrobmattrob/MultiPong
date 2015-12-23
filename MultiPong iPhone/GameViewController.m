@@ -185,7 +185,7 @@
 // Matchmaking has failed with an error
 - (void)matchmakerViewController:(GKMatchmakerViewController *)viewController didFailWithError:(NSError *)error
 {
-    NSLog(@"didFailWithError:");
+    NSLog(@"didFailWithError: %@", error);
 }
 
 // A peer-to-peer match has been found, the game should start

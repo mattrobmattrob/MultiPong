@@ -11,6 +11,7 @@
 #import <GameKit/GameKit.h>
 
 #import "GameScene.h"
+#import "PlayfieldScene.h"
 
 @interface GameViewController () <GKMatchmakerViewControllerDelegate>
 
@@ -23,45 +24,76 @@
     [super viewDidLoad];
 
     // authenticate player
-    __weak id weakSelf = self;
+    __weak GameViewController *weakSelf = self;
     GKLocalPlayer *localPlayer = [GKLocalPlayer localPlayer];
     [localPlayer setAuthenticateHandler:^(UIViewController * _Nullable vc, NSError * _Nullable error) {
         NSLog(@"localPlayer authenticated!");
-        [self hostMatch:weakSelf];
+        if (weakSelf.isViewLoaded) {
+            [weakSelf hostMatch:weakSelf];
+        }
     }];
 
-    // Configure the view.
-    SKView * skView = (SKView *)self.view;
-    skView.showsFPS = YES;
-    skView.showsNodeCount = YES;
-    /* Sprite Kit applies additional optimizations to improve rendering performance */
-    skView.ignoresSiblingOrder = YES;
-    
-    // Create and configure the scene.
-    GameScene *scene = [GameScene nodeWithFileNamed:@"GameScene"];
-    scene.scaleMode = SKSceneScaleModeAspectFill;
-    
-    // Present the scene.
-//    [skView presentScene:scene];
+    // Do any additional setup after loading the view.
+    SKView *spriteView = (SKView *)self.view;
+    spriteView.showsDrawCount = YES;
+    spriteView.showsNodeCount = YES;
+    spriteView.showsFPS = YES;
+#if !TARGET_OS_TV
+    spriteView.multipleTouchEnabled = YES;
+#endif
+
+    // MSR TODO: Implement menu buttons for game actions
+//    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapped)];
+//    tapGestureRecognizer.allowedPressTypes = @[@(UIPressTypePlayPause)];
+//    [self.view addGestureRecognizer:tapGestureRecognizer];
+
+    UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panned:)];
+    [self.view addGestureRecognizer:panGestureRecognizer];
+}
+
+-(void)panned:(UIGestureRecognizer *)gestureRecognizer
+{
+    UIPanGestureRecognizer *panGesture = (UIPanGestureRecognizer *)gestureRecognizer;
+    SKView *spriteView = (SKView *)self.view;
+    PlayfieldScene *playfield = (PlayfieldScene *)spriteView.scene;
+    CGPoint translation = [panGesture translationInView:self.view];
+    [playfield translateLeftPaddeInView:translation];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+
+    PlayfieldScene *playfield = [[PlayfieldScene alloc] init];
+    SKView *spriteView = (SKView *)self.view;
+    [spriteView presentScene:playfield];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
 
-//    [self hostMatch:self];
+    if ([GKLocalPlayer localPlayer].authenticated) {
+        [self hostMatch:self];
+    }
 }
 
 - (IBAction)hostMatch:(id)sender
 {
-    GKMatchRequest *request = [[GKMatchRequest alloc] init];
-    request.minPlayers = 2;
-    request.maxPlayers = 2;
+    static BOOL hosted = NO;
 
-    GKMatchmakerViewController *mmvc = [[GKMatchmakerViewController alloc] initWithMatchRequest:request];
-    mmvc.matchmakerDelegate = self;
-
-    [self presentViewController:mmvc animated:YES completion:nil];
+    if (!hosted) {
+//        GKMatchRequest *request = [[GKMatchRequest alloc] init];
+//        request.minPlayers = 2;
+//        request.maxPlayers = 8;
+//
+//        GKMatchmakerViewController *mmvc = [[GKMatchmakerViewController alloc] initWithMatchRequest:request];
+//        mmvc.matchmakerDelegate = self;
+//
+//        [self presentViewController:mmvc animated:YES completion:nil];
+    }
+    
+    hosted = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -81,7 +113,7 @@
 // Matchmaking has failed with an error
 - (void)matchmakerViewController:(GKMatchmakerViewController *)viewController didFailWithError:(NSError *)error
 {
-    NSLog(@"didFailWithError:");
+    NSLog(@"didFailWithError: %@", error);
 }
 
 // A peer-to-peer match has been found, the game should start
